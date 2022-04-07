@@ -1,0 +1,258 @@
+<mat-accordion class="example-headers-align">
+    <mat-expansion-panel class="panel1" [expanded]="true" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                My Cart({{cartcount}})
+            </mat-panel-title>
+
+        </mat-expansion-panel-header>
+        <div class="section">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <div fxLayout="column" fxLayoutGap="5px">
+                    <div class="cartbook" fxLayout="row" fxLayout="start center" *ngFor="let book of cartbooks">
+           <div>
+                            <div class="image" fxLayoutAlign="start center">
+                                <img class="bookImage" src="../../../assets/Image 11@2x.png">
+                            </div>
+         </div>
+
+         <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
+                            <div class="bookname">
+                                {{book.bookModel.bookName}}
+                            </div>
+                            <div class="author">
+                                by {{book.bookModel.authorName}}
+                            </div>
+                            <div class="price" fxLayout="row" fxLayoutGap="10px">
+                                <div class="discountprice">
+                                    Rs.{{book.bookModel.discountPrice}}
+                                </div>
+                                <div class="originalprice">
+                                    <del> Rs.{{book.bookModel.originalPrice}} </del>
+                                </div>
+                            </div>
+
+                            <div class="quantity" fxLayout="row" fxLayoutAlign="space-evenly center">
+                                <button mat-mini-fab class="negativebutton" (click)="negative(book)">
+                                    <!--this (book) is coming from ngFor book of cart books, we are passing this book as an argument in click function because in getcart.ts file in negative() & updatequantity() method we have given argument as (book:any)-->
+                                    <span class="negative">-</span>
+                                </button>
+                                <span class="bookquantity"> {{book_qty}} </span>
+                                <button mat-mini-fab class="positivebutton" (click)="positive(book)">
+                                    <!--this (book) is coming from ngFor book of cart books, we are passing this (book) as an argument in click function because in getcart.ts file in positive() & updatequantity() method we have given argument as (book:any)-->
+                                    <span class="positive">+</span>
+                                </button>
+                                <span class="remove" (click)="removecartitem(book)">Remove</span>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="80%">
+                    <div class="location" fxLayoutAlign="center center">
+                        <mat-icon class="placeIcon">place</mat-icon>
+                        <span class="currentlocation">Use current location</span>
+                    </div>
+                    <div>
+                        <button mat-flat-button class="button" color="primary" *ngIf="step1button && disabled"
+                            (click)="setStep(1)" routerLink="/orderplacedsuccessfully" (click)="order()">Place Order
+
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel class="panel2" [expanded]="step1" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Address Details
+            </mat-panel-title>
+
+        </mat-expansion-panel-header>
+
+        <div class="customerdetails" fxLayout="row" fxLayoutAlign="space-between start">
+
+            <form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+                <div class="maindivofform" fxLayout="column" fxLayoutGap="2px">
+
+                    <div class="details" fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="40%">
+                        <span class="heading">Customer Details</span>
+                    </div>
+
+                    <div class="details" fxLayout="row" fxLayoutGap="20px">
+                        <div class="fullname">
+                            <div>
+                                <mat-label class="names">Full Name</mat-label>
+                            </div>
+                            <div>
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="text" formControlName="fullName" placeholder="">
+                                    <mat-error>Enter full name</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="mobileno">
+                            <div>
+                                <mat-label class="names">Mobile Number</mat-label>
+                            </div>
+                            <div>
+
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="text" formControlName="mobileNo" placeholder="">
+                                    <mat-error>Enter mobile number</mat-error>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="details" fxLayout="column">
+                        <div>
+                            <mat-label class="names">Address</mat-label>
+                        </div>
+                        <div>
+
+                            <mat-form-field>
+                                <textarea matInput type="text" formControlName="address" placeholder=""></textarea>
+                                <!-- <textarea type="text" formControlName="address" placeholder=""></textarea>  -->
+                                <mat-error>Enter address</mat-error>
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+
+                    <div class="details" fxLayout="row" fxLayoutAlign="space-between center">
+                        <div class="city">
+                            <div>
+                                <mat-label class="names">City/Town</mat-label>
+                            </div>
+                            <div>
+
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="text" formControlName="city" placeholder="">
+                                    <mat-error>Enter city</mat-error>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                        <div class="state">
+                            <div>
+                                <mat-label class="names">State</mat-label>
+                            </div>
+                            <div>
+
+                                <mat-form-field appearance="outline">
+                                    <input matInput type="text" formControlName="state" placeholder="">
+                                    <mat-error>Enter state</mat-error>
+                                </mat-form-field>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div fxLayout="column" fxLayoutGap="7px">
+                        <span class="type">Type</span>
+                        <mat-radio-group aria-label="Select an option">
+                            <mat-radio-button class="home" value="1">home</mat-radio-button>
+                            <mat-radio-button class="work" value="2">work</mat-radio-button>
+                            <mat-radio-button class="other" value="3">other</mat-radio-button>
+                        </mat-radio-group>
+
+
+                    </div>
+
+
+
+                </div>
+                <div class="addressandcontinue" fxLayout="column" fxLayoutAlign="space-between center"
+                    fxLayoutGap="50%">
+                    <div class="address" fxLayoutAlign="center center">
+                        <span>Add New Address</span>
+                    </div>
+                    <div>
+                        <button mat-flat-button class="continuebutton" color="primary" (click)="setStep(2)"
+                            *ngIf="step2button">Continue</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+
+
+
+        </div>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel [expanded]="step2" hideToggle>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Order Summary
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+
+
+        <div class="section">
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <div fxLayout="column" fxLayoutGap="20px">
+                    <div class="cartbook" fxLayout="row" fxLayout="start center" *ngFor="let book of cartbooks">
+                        <div>
+                            <div class="image" fxLayoutAlign="start center">
+                                <img class="bookImage" src="../../../assets/Image 11@2x.png">
+                            </div>
+                        </div>
+
+                        <div class="entirebook" fxLayout="column" fxLayout.sm="column">
+
+                            <div class="bookname">
+                                {{book.bookModel.bookName}}
+                            </div>
+                            <div class="author">
+                                by by {{book.bookModel.authorName}}
+                            </div>
+                            <div class="price" fxLayout="row" fxLayoutGap="10px">
+                                <div class="discountprice">
+                                    Rs Rs.{{book.bookModel.discountPrice}}
+                                </div>
+                                <div class="originalprice">
+                                    <del> Rs.{{book.bookModel.originalPrice}} </del>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="rightdiv" fxLayout="column" fxLayoutAlign="space-between center">
+
+                    <div>
+                        <button mat-flat-button class="checkoutbutton" (click)="ordersummary()"
+                            color="primary">Checkout</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </mat-expansion-panel>
+
+</mat-accordion>

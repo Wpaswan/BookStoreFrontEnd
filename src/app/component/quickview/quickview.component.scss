@@ -1,0 +1,293 @@
+.smallimages{
+    margin-bottom: 16%;
+    width: 50px;
+    height: 60px; 
+    margin-right: 5px; 
+    margin-top: 10%;
+}
+.small1{
+    border: 1px solid rgb(165, 42, 42);
+    background-color: rgba(255, 192, 203, 0.562); 
+    padding: 4px;
+}
+.img1{
+    width: 40px;
+    height: 50px;
+    padding-top: 5px;
+}
+.small2{
+    border: 1px solid gainsboro ; 
+    padding: 4px;
+    margin-top: -10px;
+
+}
+.img2{
+    width: 40px;
+    height: 50px;
+    padding-top: 3px;
+   
+}
+.imageandbutton{
+    // border:2px solid yellow;
+    width: 280px;
+    height: 380px;
+    margin-top: 10%;
+    margin-left: -4px;
+
+} 
+
+// .bigimage{
+//     border:2px solid red;
+
+//     width: 250px;
+//     height: 350px;
+// }
+
+.big1{
+    width: 280px;
+    height: 310px;
+    border: 1px solid gainsboro;
+}
+.image1{
+//    border: 20px;
+   width: 210px;
+   height: 260px;
+   padding: 25px;
+   padding-left: 32px;
+}
+
+.cartandwishlistbutton{
+    margin-top: 20px;
+    // position: sticky;
+    
+}
+.addtobag{
+    background: brown; 
+    color: rgba(255, 255, 255, 0.767); 
+    width: 125%; 
+
+}
+.wishlist{
+    background: black; 
+    color: rgba(255, 255, 255, 0.767); 
+    width: 125%; 
+
+}
+.wishlistIcon{
+
+}
+.bookdetailsdiv{
+    margin-left: 5%; 
+    margin-bottom: 5%; 
+    margin-top: 10%;
+
+}
+.entirebook{
+    // border: 1px solid red;
+
+}
+.bookname{
+    font-size: 20px; 
+    margin-bottom: 10px;
+
+}
+.author{
+    color: grey; 
+    font-size: 15px; 
+    margin-bottom: 10px;
+
+}
+.rating{
+    background: rgba(0, 100, 0, 0.87);
+    height: 20px;
+    width: 45px;
+    color: white;
+    margin-bottom: 10px;
+
+}
+.Star{
+    height: 15px;
+    width: 15px;
+    font-size: 10px; 
+    margin-top: -1px;
+    // margin-left: 3px;
+
+}
+.quantity{
+    font-size: 15px;
+    margin-top: -32px;
+    margin-left: 55px;
+    color: grey;
+  }
+.price{
+    font-size: 20px;
+    margin-top: 10px;
+
+}
+.discountprice{
+    font-weight: 600; 
+    margin-bottom: 10px;
+
+}
+.originalprice{
+    color: grey;
+}
+.bookdetail{
+    opacity: 0.7; 
+    margin-top: 20px; 
+    margin-bottom: 5px;
+
+}
+.bookparagraph{
+    font-size: 13px;
+}
+.customerfeedback{
+    font-size: 18px; 
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+.overallrating{
+    // border: 1px solid red;
+    background: whitesmoke;
+    
+
+}
+.rate{
+    // border: 1px solid yellow;
+    margin-left: 15px;
+
+}
+.ratename{
+    font-size: 13px; 
+    font-weight: 500;
+    margin-top: 10px;
+
+}
+.review{
+    height: 60px; 
+    width: 90%;
+    border: none; 
+    outline: none; 
+    margin-left: 20px;
+    font-size: 15px; 
+    opacity: 0.6;
+
+}
+.submitbutton{
+    height: 33px;
+    width: 95px;
+    margin-right: 35px; 
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    opacity: 0.9;
+    
+
+}
+
+.userfeedback{
+    // border: 1px solid gainsboro;
+    margin-top: 20px;
+    margin-left: 5px;
+}
+.shortname{
+    // border: 1px solid green;
+    background-color: transparent;
+    color: gray;
+    height: 35px;
+    width: 35px;
+    box-shadow: none;
+    border: 1px solid gainsboro;
+    padding: 0px;
+}
+.feedbackname {
+    // border: 1px solid red;
+    opacity: 1;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.feedbackrating{
+
+}
+.feedbackcomment{
+    color: #707070;
+    opacity: 1;
+
+}
+
+.overallrating .star-widget input{
+    display: none;
+}
+.star-widget{
+    // border: 1px solid green;
+    height: 30px;
+    margin-top: -15px;
+    margin-right: 400px;
+    // background-color: white;
+}
+.star-widget label{
+    // border: 1px solid red;
+    font-size: 20px;
+    color: #444;
+    padding: 8px;
+    float: right;
+    transition: all 0.2 ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+    color:  #fd4;
+}
+input:checked ~ label{
+    color: #fd4;
+}
+
+input#rate-5:checked ~ label{
+    color: #fe7;
+    text-shadow: 0 0 20px #fe7;
+}
+
+
+.countquantity{
+    border: 1px solid palevioletred;
+    position: relative;
+    left: 10px;
+
+}
+.negativebutton{
+    background-color: white; 
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+.negative{
+    color: lightgrey;
+    position: relative;
+    top: -10px;
+
+}
+.bookquantity{
+    font-size: 15px;
+    border: 1px solid whitesmoke;
+    // height: 25px;
+    // width: 40px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+
+    width: 40px;
+    height: 23px;
+
+}
+.positivebutton{
+    background-color: white; 
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+
+}
+.positive{
+    color: black;
+    position: relative;
+    top: -10px;
+
+}

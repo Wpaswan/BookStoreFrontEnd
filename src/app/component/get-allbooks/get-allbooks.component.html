@@ -1,0 +1,83 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayout.sm="row" fxLayout.xs="row">
+
+  <div class="bookandCount">
+      <span class="books">Books</span>
+      <span class="count"></span>
+      <!--we are just binding data using string interpolation between getallbooks.html and getaalbooks.ts -->
+  </div>
+
+  <div class="sortbyrelevance">
+      <mat-form-field appearance="outline">
+          <mat-label>Sort by relevance</mat-label>
+          <mat-select class="matselect">
+              <mat-option style="color: #a03037;" (click)="lowtohigh()" value="one">Price:Low to High</mat-option>
+              <mat-option style="color: #a03037;" (click)=" hightolow()" value="two">Price:High to Low</mat-option>
+              <mat-option style="color: #a03037;" (click)="newestarrivals()" value="third">Newest Arrivals</mat-option>
+          </mat-select>
+      </mat-form-field>
+  </div>
+
+</div>
+
+<div fxLayoutAlign="center center" fxLayout="row wrap" fxLayoutGap="15px">
+  <div class="entirebook"
+  *ngFor="let book of booksArray | pipe:searchword | paginate: { itemsPerPage: 8, currentPage: page, totalItems:totalLength }"
+      fxLayout.sm="column">
+
+      <div class="bookimg"(click)="quickview(book)">
+          <!-- this (book) is coming from ngFor (let book) as we are storing aur bookname, author etc in book -->
+          <img class="img1" src="../../../assets/Image 11@2x.png" alt="">
+      </div>
+
+      <div class="bookname">
+          {{book.bookName}}
+      </div>
+      <div class="author">
+          by {{book.authorName}}
+      </div>
+      <div class="rating" fxLayoutAlign="space-evenly center">
+          4.5<img class="Star" src="../../../assets/star_outline_white_24dp.svg" alt="">
+      </div>
+
+      <div class="quantity">
+          ({{book.bookCount}})
+      </div>
+
+      <div class="price" fxLayout="row">
+          <div class="discountprice">
+              Rs.{{book.discountPrice}}
+          </div>
+          <div class="originalprice">
+              <del> Rs.{{book.originalPrice}} </del> <!-- <del> tag is used to show the removal from document-->
+          </div>
+      </div>
+
+      <div class="cartandwishlistbutton" fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-evenly center">
+          
+              <div >
+
+                  <button class="addtobag"  >
+                      <img class="cartimg" src="../../../assets/shopping_cart_black_24dp.svg" alt="">
+                  </button>
+              </div>
+              
+          <div  fxLayout="row" fxLayoutAlign="start center">
+              <button mat-raised-button class="addedtobag">
+                  ADDED TO BAG
+              </button>
+          </div>
+
+              <div  fxLayout="row" fxLayoutAlign="start center">
+
+                  <button class="wishlist" >
+                      <mat-icon class="wishlistIcon">favorite</mat-icon>
+                  </button>
+              </div>
+      </div>
+
+  </div>
+
+</div>
+<div class="pagination" fxLayoutAlign="center center">
+  <pagination-controls class="text-center my-pagination" (pageChange)="page = $event" ></pagination-controls>
+</div>

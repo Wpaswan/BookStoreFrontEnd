@@ -1,0 +1,37 @@
+<div class="entiretable" fxLayout="column" fxLayoutAlign="center center" fxLayout.sm="column" fxFlex.xs="95"
+    fxFlex.sm="60">
+    <div class="addbookbutton" fxLayout="column" fxLayout.sm="row" fxFlex.xs="95" fxFlex.sm="60">
+        <button color="primary"  (click)="AddBook()" class="addbutton">Add book</button>
+    </div>
+
+    <table class="table">
+        <tr class="tableheading">
+            <th>Sr.No</th>
+            <th>BookImage</th>
+            <th>BookName</th>
+            <th>Author</th>
+            <!-- <th>description</th> -->
+            <th>Price</th>
+            <th>DiscountPrice</th>
+            <th>Quantity</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let book of booksArray; index as i">
+            <td>{{i+1}}</td>
+            <td> <img class="img1" src="../../../assets/Image 11@2x.png" alt=""></td>
+            <td>{{book.bookName}}</td>
+            <td>{{book.authorName}}</td>
+            <!-- <td>{{book.description}}</td> -->
+            <td>{{book.originalPrice}}</td>
+            <td>{{book.discountPrice}}</td>
+            <td>{{book.bookCount}}</td>
+            <td class="buttons" fxLayoutAlign="space-evenly center" fxLayout="row" fxLayoutGap="10px">
+                <!-- <button (click)="UpdateBook(book)" class="updatebutton"> Update</button> -->
+                <button (click)="deletebook(book)" class="deletebutton">Delete</button>
+            </td>
+
+
+
+        </tr>
+    </table>
+</div>

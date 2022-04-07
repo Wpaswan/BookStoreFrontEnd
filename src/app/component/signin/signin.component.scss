@@ -1,0 +1,111 @@
+p{
+  margin-bottom: 0px;
+}
+.error {
+  color:crimson;
+  font-size: 12px;
+  font-weight: bold;
+}
+.forget {
+  padding-top:15px ; 
+  padding-left: 200px ;
+  color: #9D9D9D;
+}
+.login-signup-select {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  
+  .login-select {
+    .login-and-underline {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font: normal normal medium Roboto;
+        font-size: 33px;
+        margin-bottom: 10px;
+      }
+      .underline {
+        background-color: #A03037;
+        height: 5px;
+        width: 22px;
+        align-self: center;
+        border-radius: 4px;
+      }
+    }
+  }
+  .signup-select {
+    .signup-underline {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        font: normal normal medium Roboto;
+        font-size: 33px;
+        color:#878787;
+      }
+    }
+  }
+}
+
+.password-container{
+ margin-top: 30px;
+  
+  mat-icon{
+    color:gray;
+  }
+}
+
+.buttonSignup{
+  color:white;
+  background-color: #A03037;
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+  height: 40px;
+}
+.noWrapper{
+  width: 100%; 
+  height: 30px;
+} 
+.pass{
+ 
+  width: 100%; 
+  height: 30px;
+  border-radius: 0%;
+}
+
+p{
+mat-form-field{
+  
+  margin: 2px 2px 2px 2px;
+  height: 35px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 1px solid #FF001C;
+  border-radius: 2px;
+  opacity: 1;
+}
+}
+hr {
+  border: none;
+  border-top: 3px solid #9D9D9D;
+  color: #9D9D9D;
+  overflow: visible;
+  text-align: center;
+  height: 5px;
+}
+
+hr:after {
+  background: #fff;
+  content: 'OR';
+  padding: 0 4px;
+  position: relative;
+  top: -13px;
+  text-align: left;
+font: normal normal bold 14px/18px Meiryo UI;
+letter-spacing: 0px;
+color: #343434;
+text-transform: uppercase;
+opacity: 1;
+}

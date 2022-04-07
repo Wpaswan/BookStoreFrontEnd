@@ -1,0 +1,95 @@
+
+    div { 
+
+        .tool { 
+            //color:rgb(109, 12, 12);
+            background-color: #a03037;
+    
+            
+        }
+    }
+    
+    .searchInput {
+        height: 50%;
+        width: 90%;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'Times New Roman', Times, serif;
+        font-style: normal;
+        color: dimgrey;
+      }
+      .search-mat-card {
+        margin-left: 3%;
+        width: 50%;
+        height: 54%;
+        padding: 0px;
+      }
+    
+      .cart {
+        margin-left: 4%;
+        padding-right: 5%;
+        background-color: none;
+        outline: none;
+        color: aliceblue;
+        margin-right: 3%;
+        
+      }
+    
+      .Menu{
+        background-color: none;
+        outline: none;
+        color: aliceblue;
+      }
+      .Profile {
+        margin-left: 4%;
+        padding-right: 50%;
+        background-color: none;
+        outline: none;
+        color: aliceblue;
+        margin-right: 3%;
+      }
+    
+      .nav-link {
+        margin-left: 4%;
+        padding-right: 5%;
+        background-color: none;
+        outline: none;
+        color: aliceblue;
+        margin-right: 3%;
+        //width:20px;
+      }
+    
+    .footer{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        background-color: #2E1D1E;
+        position: fixed;
+        width: 100%;
+        color:white;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        height: 20px;
+    }
+    .login{
+      margin-top: 10px;
+      width: 100%;
+      
+       color: white;
+       height: 40px;
+       background-color:rgb(155, 6, 6);
+    }
+    .admin{
+      height: 50px;
+      width: 30px;
+      
+
+    }
+    .pro{
+      
+   margin-right: 350px;
+   color: white;
+      
+    }

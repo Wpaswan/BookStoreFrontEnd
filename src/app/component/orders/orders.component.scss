@@ -1,0 +1,60 @@
+.container {
+    margin-top:40px; 
+    margin-left: 170px;
+    margin-right: 170px;
+      
+    //   display: flex;
+    //   align-items: center;
+    //   background-color: #F5F5F5;
+    //   height:50px;
+  
+    //     margin-left:20px;
+   
+      
+  }
+  .Order { 
+    display: flex;
+    align-items: center;
+    height:50px;
+    h2 { 
+      margin-left:20px;
+      margin-bottom: 0px;
+    }
+  }
+  .Addcontainer{
+    margin-top:30px;
+    border: 1px solid #E4E4E4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .book { 
+      display: flex;
+      align-items: center;
+  
+      .image
+      {
+        padding:20px;
+      }
+      
+    }
+  }
+  
+  .ordercontainer { 
+    display: flex;
+    margin-right: 30px;
+  
+    }
+  
+    .delete-container { 
+      display: flex;
+      align-items:  baseline;
+      margin-right: 30px;
+    .green-dot{
+      background-color: green;
+      height: 10px;
+      width: 10px;
+     border-radius: 100px;
+      margin-right: 5px;
+     
+  }
+    }

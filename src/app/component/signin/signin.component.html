@@ -1,0 +1,41 @@
+<div>
+  <form id="loginForm" [formGroup]="loginForm">
+    <div class="emailId">
+      <p>Email Id</p>
+
+      <mat-form-field appearance="outline" class="noWrapper">
+        <input matInput placeholder="" formControlName="email" class="form-control"
+           />
+        <mat-hint class="error">Email is required!</mat-hint>
+      </mat-form-field>
+    </div>
+    <p></p>
+    <div class="password-container">
+      <p>Password</p>
+      <mat-form-field appearance="outline" class="pass">
+
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <mat-hint class="error" >Password is required!</mat-hint>
+
+      </mat-form-field>
+
+    </div>
+    <div class=forget>
+      <p>forget password?</p>
+
+    </div>
+    <div class="button">
+      <button mat-flat-button class="buttonSignup" (click)=onSubmit()>Login</button>
+    </div>
+
+    <div style="padding-top: 15px;">
+      <hr>
+    </div>
+    <div fxLayoutAlign="space-evenly center"  fxLayoutGap="5px">
+      <button mat-raised-button color="primary">Facebook</button>
+      <button mat-raised-button>Google</button>
+
+    </div>
+  </form>
+</div>

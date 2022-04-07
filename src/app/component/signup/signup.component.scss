@@ -1,0 +1,114 @@
+.section{
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+}
+.section-xs{
+    background-color: white;
+}
+.matcard1{
+    background-color:#F5F5F5;
+    height: 410px; 
+    width: 330px;
+    border-radius: 25px;
+   
+    display: flex; 
+}
+.img1{
+    height: 230px;
+    width: 230px;
+    border-radius: 130px;
+    margin-left: 40px;
+    margin-top: 40px;
+}
+.text{
+    font-size: 14px;
+    font-family: Roboto, sans-serif;
+    letter-spacing: 0px;
+    color: #0A0102;
+    font-weight: 500;
+    opacity: 1;
+    height: 60px;
+    width: 240px;
+    margin-top: 310px;
+    margin-right: 40px;
+    display: flex;
+    position: relative;
+    right: 190px;
+   
+}
+
+.matcard2{
+    background-color:#F5F5F5;
+   
+    height: 510px; 
+    width: 340px;
+    display: flex; 
+    position: relative;
+    right: 3%;
+}
+
+.login{
+   
+    margin-top: 15px;
+    margin-bottom: 480px;
+    position: relative;
+    left: 35px;
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #878787;
+    cursor: pointer;
+
+}
+.signup{
+    
+    margin-top: 15px;
+    margin-bottom: 360px;
+    display: flex;
+    position: relative;
+    left: 180px;
+    bottom: 60px; 
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #878787;
+    cursor: pointer;
+
+}
+
+.form{
+    
+    position: relative;
+    right: 34%;
+    top: 12%;
+    width: 100%;
+}
+.fullname{
+  
+     height: 18px;
+   
+}
+.mat-form-field{
+    
+    width: 275px;
+}
+.password{
+   
+    height: 18%;
+}
+.number{
+   
+    height: 18%;
+}
+.signupbutton{
+    width: 275px;
+    background-color: brown;
+    color: white;
+    position: relative;
+    
+
+}
+.fn{
+    height: -120px;
+}
